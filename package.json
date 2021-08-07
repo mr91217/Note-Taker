@@ -4,11 +4,17 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.17.1",
+    "heroku": "^7.56.1",
+    "i": "^0.3.6",
+    "jest": "^27.0.6",
+    "node": "^16.6.1",
+    "yarn": "^1.22.11"
   }
 }
