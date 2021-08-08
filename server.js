@@ -3,7 +3,7 @@ const express = require('express');
 // const { animals } = require('./data/animals');
 const PORT = process.env.PORT || 3001;
 const app = express();
-// const apiRoutes = require('./routes/apiRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
 
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Use apiRoutes
-// app.use('/api', apiRoutes);
+app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 
