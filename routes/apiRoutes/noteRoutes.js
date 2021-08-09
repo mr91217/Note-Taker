@@ -1,14 +1,10 @@
 const router = require('express').Router();
-const { filterByQuery, createNewNote, deletefun, findById } = require('../../lib/notes');
+const { createNewNote, deletefun, findById } = require('../../lib/notes');
 const { db } = require('../../db/db');
 
 
 router.get('/notes', (req, res) => {
-    // let results = db;
-    // if (req.query) {
-    //   results = filterByQuery(req.query, results);
-    // }
-    // res.json(results);
+    
     res.json(db);
 });
 
@@ -21,12 +17,17 @@ router.get('/notes', (req, res) => {
 //     }
 // });
 
+//==================== Reference ==================//
 router.delete('/notes/:id', (req, res) => {
     deletefun(req.params.id, db);
     res.json(true);
 });
+//==================== Reference ==================//
+
 
 router.post('/notes', (req, res) => {
+    req.body.id = db.length.toString();
+
     const note = createNewNote(req.body, db);
     res.json(note);
 });
