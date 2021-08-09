@@ -16,5 +16,18 @@
     "jest": "^27.0.6",
     "node": "^16.6.1",
     "yarn": "^1.22.11"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr91217/Note-Taker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/mr91217/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/mr91217/Note-Taker#readme"
 }
